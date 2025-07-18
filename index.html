@@ -1,194 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- <meta http-equiv="refresh" content="1"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- aos animation link from github -->
-      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- bootstrap version 4.6 css link  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <!-- bootstrap js links  -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-    <!-- tab icon link -->
-    <link rel="icon" type="image/png" href="https://png.pngtree.com/png-vector/20190226/ourmid/pngtree-vector-portfolio-icon-png-image_705750.jpg">
-    <!-- index page css link -->
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <title>Nikhil Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikhil Portfolio</title>
+  <link rel="icon" href="https://png.pngtree.com/png-vector/20190226/ourmid/pngtree-vector-portfolio-icon-png-image_705750.jpg" type="image/png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:wght@700&family=Rubik+Iso&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+    header {
+      background-image: url('https://camo.githubusercontent.com/61491d59e71fec5c794945fed916a4a682b6c0404fc31f30b08a0d919c558404/6874747073...');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+    .dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <div class="navigation-bar">
-                <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-  <a class="navbar-brand" href="index.html"><span class="myname">Nikhil</span></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#home"><span class="mymenu">Home</span></a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#about"><span class="mymenu">About</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#skills"><span class="mymenu">Skills</span></a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#project"><span class="mymenu">Projects</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.linkedin.com/in/nikhil-khandare-455763234/" ><span class="mymenu">Contact</span></a>
-      </li>
-    </ul>
-    
-  </div>
-</nav>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">Nikhil</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#project">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <button class="btn btn-outline-light ml-3" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
-   
-   <div class="cont">
-     <div class="dv" id="home">
-        <div class="info">
-            <span class="hminfo"  data-aos="fade-in">Hello </span><br>
-            <span class="hminfo">My name is </span><br>
-            <span class="hmname" data-aos="slide-up">Nikhil Khandare</span><br>
-            <span class="hminfo">I am a Full Stack Java Developer</span>
-            <div class="rsmbtn" 
-            <a href="NikhilResume.pdf">
-                <button>RESUME</button>
-            </a>
-            </div>
+  </nav>
+
+   <!-- Hero Section -->
+  <header id="home" class="d-flex align-items-center justify-content-start">
+    <div class="container hero-text" data-aos="fade-in">
+      <h1>Hello,</h1>
+      <h2>My name is <span>Nikhil Khandare</span></h2>
+      <h4>I am a Full Stack Java Developer</h4>
+      <a href="NikhilResume.pdf" class="btn btn-info mt-3">Download Resume</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="Pass.jpeg" alt="Profile" class="img-fluid rounded-circle shadow" height="250">
         </div>
+        <div class="col-md-8">
+          <p class="lead text-justify">I am a Full-Stack Java developer with a vast array of knowledge in front-end and back-end technologies. Passionate about delivering quality software, learning new skills, and collaborating with dynamic teams to build innovative solutions.</p>
+        </div>
+      </div>
     </div>
-    <br>
+  </section>
 
-    <div class="dv" id="about" align="center">
-        <h1 align="center" class="hd">ABOUT</h1>
-        <table width="95%"  height="220px">
-            <tr>
-                <td width="40%" align="center" valign="center">
-                      <div>
-                          <img src="Pass.jpeg" height="200px" class="myimg">
-                     </div>
-                </td>
-                <td>
-                     <div>
-                        <p class="co">
-                          I am a Full-Stack Java developer with a vast array of knowledge in many different front end and back end languages, responsive frameworks, databases, and best code practices. My objective is simply to be the best Full-Stack Java developer that I can be and to contribute to the technology industry all that I know and can do. I am dedicated to perfecting my craft by learning from more seasoned developers, remaining humble, and continuously making strides to learn all that I can about development. While a student at Sant Gadge Baba Amravati University , I studied Software Engineering, Client Server Computing, Data Security,Cloud Computing and many more subjects while working on live Project , and I believe that my understanding of problem solving and complex algorithms are also skills that have and will continue to contribute to my overall success as a developer.
-                        </p>
+  <!-- Skills Section -->
+  <section id="skills" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Skills</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Languages</h5>
+          <p>Core Java, HTML, CSS, JavaScript, SQL, XML, JSON</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Tools</h5>
+          <p>MySQL, MongoDB, Eclipse, VS Code, Postman, JIRA</p>
+        </div>
+        <div class="col-md-6">
+          <h5>APIs & Frameworks</h5>
+          <p>Collections, Streams, REST, ReactJS, Spring Boot, Hibernate, JSP, Servlet, Bootstrap</p>
+        </div>
+        <div class="col-md-6">
+          <h5>Operating Systems</h5>
+          <p>Windows, Linux, iOS, Android</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="project" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Projects</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card h-100">
+            <img src="https://ph-files.imgix.net/c9974922-3ce9-4a04-9f16-e3d05703a8ad.gif" class="card-img-top" alt="Rock-Paper-Scissors">
+            <div class="card-body">
+              <h5 class="card-title">Rock-Paper-Scissors</h5>
+              <p class="card-text">Classic Rock-Paper-Scissors game built with web technologies.</p>
+              <a href="#" class="btn btn-outline-info btn-sm">View Project</a>
+            </div>
           </div>
-                </td>
-            </tr>
-        </table>
-       
-         
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card h-100">
+            <img src="https://i.pinimg.com/originals/83/82/06/83820619a50bc4676d642561a9fe7355.gif" class="card-img-top" alt="Music Player">
+            <div class="card-body">
+              <h5 class="card-title">Music Player</h5>
+              <p class="card-text">A responsive music player app that plays audio tracks from your library.</p>
+              <a href="#" class="btn btn-outline-info btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card h-100">
+            <img src="https://media.tenor.com/adNy2LB2V9cAAAAC/to-do-list-check-list.gif" class="card-img-top" alt="To-Do List">
+            <div class="card-body">
+              <h5 class="card-title">To-Do List</h5>
+              <p class="card-text">Track your tasks efficiently using a clean and simple to-do app.</p>
+              <a href="#" class="btn btn-outline-info btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card h-100">
+            <img src="https://img-c.udemycdn.com/course/750x422/4323152_344f.jpg" class="card-img-top" alt="Instagram Clone">
+            <div class="card-body">
+              <h5 class="card-title">Instagram Clone</h5>
+              <p class="card-text">A clone of Instagram with post, profile, and social features.</p>
+              <a href="#" class="btn btn-outline-info btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card h-100">
+            <img src="https://www.dhl.com/etc.clientlibs/dhl/clientlibs/discover-animatedpages/resources/img/animated10/hero10.gif" class="card-img-top" alt="Fitness Tracker">
+            <div class="card-body">
+              <h5 class="card-title">Fitness Tracker</h5>
+              <p class="card-text">Track your health and workouts with this mobile-friendly app.</p>
+              <a href="#" class="btn btn-outline-info btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up">
+          <div class="card h-100">
+            <img src="https://recorder.easeus.com/images/en/screen-recorder/resource/4k-video-player-for-windows-mac.jpg" class="card-img-top" alt="Video Player">
+            <div class="card-body">
+              <h5 class="card-title">Video Player</h5>
+              <p class="card-text">Play and manage your favorite video files with ease.</p>
+              <a href="#" class="btn btn-outline-info btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <br>
-    <br>  
-    <br>  
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-     <div class="dv" id="skills" align="center">
-         <h1 align="center" class="hd">SKILLS</h1>
-         <div>
-             <table height="300px"  width="95%" class="tbl" >
-                 <tr valign="top">
-                     <td width="50%">
-                         <span class="skillshead">Language</span><br>
-                         <p>Core JAVA, HTML, CSS, JavaScript, SQL, XML, JSON</p>
-                     </td>
-                     <td>
-                        <span class="skillshead">Tools</span><br>
-                        <p>Oracle SQL , MySQL, MongoDB, Eclipse(Oxygen), Visual Studio Code, Postman, JIRA(Project Management Tool)</p>
-                     </td>
-                 </tr>
-                  <tr valign="top">
-                     <td>
-                        <span class="skillshead">API's and Frameworks</span><br>
-                         <p>Collections, Streams, Date & Time API, Rest API, Soap API, ReactJS, Hibernates, JSP , Servelts, Spring, SpringBoot, SpringCore, Spring MVC, Spring Security, Spring Core, Bootstrap(4.6v)  </p>
-                     </td>
-                     <td>
-                        <span class="skillshead">Operating System</span><br>
-                        <p>Windows , Linux, ios, Andriod</p>
-                        
-                     </td>
-                 </tr>
-             </table>
-         </div>
-    </div>
-     <div class="dv" id="project" align="center">
-     <h1 align="center" class="hd">PROJECTS</h1>
-     <div class="projectsss">
-                <div class="card-deck">
-  <div class="card">
-    <img src="https://ph-files.imgix.net/c9974922-3ce9-4a04-9f16-e3d05703a8ad.gif?auto=format&fit=crop" class="card-img-top" alt="rock-paper-scissors-neon-icons game" height="250px">
-    <div class="card-body">
-      <h5 class="card-title"><span class="protitle">Rock-Paper-Scissors</span></h5>
-      <p class="card-text">Rock, Paper, Scissors. The familiar game of Rock, Paper, Scissors is played like this: at the same time, two players display one of three symbols: a rock, paper, or scissors. A rock beats scissors, scissors beat paper by cutting it, and paper beats rock by covering it.</p>
-      <p class="card-text"><small ><a href="#">Click for link</a></small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://i.pinimg.com/originals/83/82/06/83820619a50bc4676d642561a9fe7355.gif" class="card-img-top" alt="MUSIC player">
-    <div class="card-body">
-      <h5 class="card-title"><span class="protitle">  Music Player </span></h5>
-      <p class="card-text">A mobile phone application that allows you to listen to music files stored in the phone's internal or external memory.</p>
-        <p class="card-text"><small ><a href="#">Click for link</a></small></p>
+  </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+      <form class="w-75 mx-auto">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-info">Send Message</button>
+      </form>
     </div>
-  </div>
-  <div class="card">
-    <img src="https://media.tenor.com/adNy2LB2V9cAAAAC/to-do-list-check-list.gif" class="card-img-top" alt="to do list" height="350px">
-    <div class="card-body">
-      <h5 class="card-title"><span class="protitle">TO-DO LIST</span></h5>
-      <p class="card-text">To-Do List App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, with the most important tasks at the top of the list, and the least important tasks at the bottom.</p>
-            <p class="card-text"><small ><a href="#">Click for link</a></small></p>
-    </div>
-  </div>
-</div>
-         <div class="card-deck" id="nextpro">
-  <div class="card">
-    <img src="https://img-c.udemycdn.com/course/750x422/4323152_344f.jpg" class="card-img-top" alt="Instagram Clone">
-    <div class="card-body">
-      <h5 class="card-title"><span class="protitle">Instagram Clone</span></h5>
-      <p class="card-text"> Instagram clone is our pre-built social media app software that helps entrepreneurs to build an Instagram-like app..</p>
-      <p class="card-text"><small ><a href="#">Click for link</a></small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://www.dhl.com/etc.clientlibs/dhl/clientlibs/discover-animatedpages/resources/img/animated10/hero10.gif" class="card-img-top" alt="Fitness Traking application">
-    <div class="card-body">
-      <h5 class="card-title"><span class="protitle">Fitness Tracker</span></h5>
-      <p class="card-text"> A fitness tracking app is a mobile application designed to help users monitor and manage their physical activity, health metrics, and wellness goals.</p>
-      <p class="card-text"><small ><a href="#">Click for link</a></small></p>
-    </div>
-  </div>
-  <div class="card">
-    <img src="https://recorder.easeus.com/images/en/screen-recorder/resource/4k-video-player-for-windows-mac.jpg" class="card-img-top" alt="Video Player" height="300px">
-    <div class="card-body">
-      <h5 class="card-title"><span class="protitle">Video Player</span></h5>
-      <p class="card-text">play any video files, make playlist of your favorite videos and provide easy controllable player.</p>
-        <p class="card-text"><small ><a href="#">Click for link</a></small></p>
+  </section>
 
-    </div>
-  </div>
-</div>
-     </div>
-     </div>
-    </div>
-    </div>
-    </div>
-   </div>
-      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-      <script>
-        AOS.init({
-            duration: 1000
-        });
-      </script>
+  <!-- Back to Top Button -->
+  <button class="btn btn-info back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Top</button>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Nikhil Khandare | All Rights Reserved</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+
+    // Show back to top button
+    window.onscroll = function() {
+      document.querySelector('.back-to-top').style.display = window.scrollY > 300 ? 'block' : 'none';
+    };
+  </script>
 </body>
 </html>
